@@ -1,0 +1,21 @@
+
+pseudo-code
+
+Start
+Input number
+if(number >=100 && number<=999),then
+    display "is Three Digit Number"
+else
+display "is not a Three Digit Number"
+End-if
+End
+digit1 = number / 100
+digit2 = (number / 10) % 10
+digit3 = number % 10
+sumOfCubes = (digit1 * digit1 * digit1) + (digit2 * digit2 * digit2) + (digit3 * digit3 * digit3)
+ if (sumOfCubes == number),then
+    display "Is a Armstrong number"
+else
+    display "Not a Armstrong number"
+End-if
+END

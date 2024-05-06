@@ -1,0 +1,23 @@
+Question 8
+Write a pseudo-code to find out if a given year is a leap year or not.
+Any year which is divisible by 4 and not by 100 are leap years. Otherwise, any year which is divisible by 400 is also a leap year.
+
+Algorithm
+
+Step 1 - Start
+Step 2 - Input the year
+Step 3 - If the year is divisible by 4 and not divisible by 100, or if the year is divisible by 400, then
+Step 4 - Display "Leap year"
+Step 5 - Else
+Step 6 - Display "Not a leap year"
+Step 7 - End
+
+Pseudo-code
+
+Start
+Input year
+if (year is divisible by 4 and not divisible by 100) or (year is divisible by 400) then  //if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+    Display "Is a Leap year"
+else
+    Display "Not a leap year"
+End

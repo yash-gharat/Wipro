@@ -1,0 +1,32 @@
+Question 3
+Anuj, a class 9 student, has designed the following flowchart to input a positive number and check and display whether the number is a single digit number, a double digit number or a triple digit number. To assess his brother who is in class 8, he hides four statements in the flowchart.
+
+Algorithm
+
+Step 1 - Start
+Step 2 - Input a positive number (num)
+        if num>0 then 
+        Not a positive number
+Step 3 - if num is less than 10, then
+Step 4 - Display "Number is a single digit number"
+Step 5 - else if num is less than 100, then
+Step 6 - Display "Number is a double digit number"
+Step 7 - else if num is less than 1000, then
+Step 8 - Display "Number is a triple digit number"
+Step 9 - else
+Step 10 - Display "Number is greater than three digits"
+Step 11 - End
+
+Pseudo-code
+
+Start
+Input num
+if num < 10 then
+    Display "Number is a single digit number"
+else if num < 100 then
+    Display "Number is a double digit number"
+else if num < 1000 then
+    Display "Number is a triple digit number"
+else
+    Display "Number is greater than three digits"
+End

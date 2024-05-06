@@ -1,0 +1,22 @@
+Question 4
+Accept the age of a person and check whether he/she is eligible to vote or not. A person is eligible to vote only when he/she is 18 years or more.
+
+Algorithm
+
+Step 1 - Start
+Step 2 - Input the age of the person (age)
+Step 3 - If age is greater than or equal to 18, then
+Step 4 - Display "You are eligible to vote"
+Step 5 - Else
+Step 6 - Display "You are not eligible to vote"
+Step 7 - End
+
+Pseudo-code
+
+Start
+Input age
+if (age >= 18) then
+    Display "You are eligible to vote"
+else
+    Display "You are not eligible to vote"
+End

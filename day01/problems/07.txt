@@ -1,0 +1,37 @@
+Question 7
+Input three angles of a triangle and check whether a triangle is possible or not. If possible, then check whether it is an 'Acute-angled Triangle', 'Obtuse-angled Triangle' or a 'Right-angled Triangle'.write algorithm and flowchart.
+ 
+Algorithm
+
+Step 1 - Start
+Step 2 - Input three angles of the triangle (angle1, angle2, angle3)
+Step 3 - Calculate the sum of the angles (sum_of_angles = angle1 + angle2 + angle3)
+Step 4 - If sum_of_angles is equal to 180, then
+Step 5 - Display "Triangle is possible"
+Step 6 - If angle1 < 90 and angle2 < 90 and angle3 < 90, then
+Step 7 - Display "Acute-angled Triangle"
+Step 8 - Else if angle1 > 90 or angle2 > 90 or angle3 > 90, then
+Step 9 - Display "Obtuse-angled Triangle"
+Step 10 - Else
+Step 11 - Display "Right-angled Triangle"
+Step 12 - Else
+Step 13 - Display "Triangle is not possible"
+Step 14 - End
+
+
+Pseudo-code
+
+Start
+Input angle1, angle2, angle3
+sum_of_angles = angle1 + angle2 + angle3
+if (sum_of_angles == 180) then
+    display "Triangle is possible"
+    if angle1 < 90 and angle2 < 90 and angle3 < 90 then
+        Display "Acute-angled Triangle"
+    else if angle1 > 90 or angle2 > 90 or angle3 > 90 then
+        Display "Obtuse-angled Triangle"
+    else
+        Display "Right-angled Triangle"
+else
+    Display "Triangle is not possible"
+End

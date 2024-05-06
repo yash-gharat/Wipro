@@ -1,0 +1,22 @@
+Question 6
+In a cricket match, a viewer carries a laptop in the stadium every day to keep record of the runs made by each batsman. When a player comes to bat, the viewer enters the previous runs made by the player. Further, he enters the runs scored for each ball. When the runs entered on a ball is -1, it means the player is out. The laptop then displays the runs made by the player in the current innings as well as the total. The process continues until all the players are out. Draw a flowchart for the task stated above.
+ 
+Start
+total_runs = 0
+WHILE (not all_batsmen_out)
+    Input previous_runs
+    current_runs = 0
+
+    WHILE (batsman_not_out)
+      Input ball_runs
+      IF (ball_runs == -1) then
+        Display("Out!")
+      ELSE
+        current_runs = current_runs + ball_runs
+        Display(current_runs)
+      END IF
+    END WHILE
+    total_runs = total_runs + current_runs
+  END WHILE
+  Print("Match Total:", total_runs)
+END

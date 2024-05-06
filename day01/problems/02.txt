@@ -1,0 +1,28 @@
+Question 2
+As a homework assignment, your teacher has given a flowchart (shown below) to find and display the square and cube of a positive number. The execution must be terminated, if a negative number is entered.
+
+Algorithm:
+
+Step 1 - Start
+Step 2 - Input a number (num)
+Step 3 - If num is negative, then
+Step 4 - Display "Execution terminated"
+Step 5 - End
+Step 6 - Calculate square of num (square = num * num)
+Step 7 - Calculate cube of num (cube = num * num * num)
+Step 8 - Display "Square of num is square"
+Step 9 - Display "Cube of num is cube"
+Step 10 - End
+
+Pseudo-code
+
+Start
+Input num
+if (num < 0) then
+    Display "Execution terminated"
+    End
+square = num * num
+cube = num * num * num
+Display "Square of num is square" 
+Display "Cube of num is cube"
+End

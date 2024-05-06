@@ -1,0 +1,29 @@
+Question 5
+ 
+Accept three numbers and check whether they are 'Pythagorean Triplets' or not. Display the message accordingly.
+(Hint: Use Pythagoras Formula for a Right-angled Triangle: h = p2+b2)
+ Algorithm
+
+ Start
+Input three numbers (a, b, c)
+Calculate the squares of each number: a_squared = a * a, b_squared = b * b, c_squared = c * c
+If (a_squared + b_squared = c_squared) or (a_squared + c_squared = b_squared) or (b_squared + c_squared = a_squared)
+Display "The numbers are Pythagorean Triplets"
+Else
+Display "The numbers are not Pythagorean Triplets"
+End
+
+Start
+Input a, b, c (3,4,5)
+a_squared = a * a 9
+b_squared = b * b 16
+c_squared = c * c 25
+If (a_squared + b_squared = c_squared) OR (a_squared + c_squared = b_squared) OR (b_squared + c_squared = a_squared) Then
+    9+16=25 or 9+25=16 or 16+25=9
+    T or F or F
+    T
+    Display "The numbers are Pythagorean Triplets"
+Else
+    Display "The numbers are not Pythagorean Triplets"
+End If
+End

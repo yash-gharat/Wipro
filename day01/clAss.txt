@@ -1,0 +1,181 @@
+What is programming
+-giving set of instruction to machine
+
+What is a program
+- Set of instructions(Air traffic controll/ATC or ATM)
+
+Problem solving
+ step1 - input
+ step2 - logic/process
+ step3 - output
+
+Algorithm
+- sequence of steps to solve a problem
+
+Pseudo-code
+- simple way of writing code in english
+
+Flowchart
+-representing alogorithm in graphical form
+
+Variable
+if you want to store data in program then you required varaible yo store that data
+
+Variable is a combination Alpha+Numbers+SpecialSymbols
+
+Operatoer
+- Speacial symbols to perform any specific task
+
+10 + 20
+a+b
++ is the operator
+a,b- operand
+
+% remainder
+/ Quotient
+
+Relational Operator always return true or false
+
+Logical operator to combine 2 or more condition
+And
+OR
+Not
+
+Assume, Num1=5, Num2=6.
+(Num1 < Num2) and (Num1 != Num2)
+T and T -T
+(Num2 >= Num1) or (Num1 > Num2)
+T ot F - T
+not (Num1 == Num2)
+ T
+Identify the expressions which would result in True?
+a. All the given options
+b. 1, 2
+c. 2, 3
+
+Q2 of 3outlined_flag
+Assume, Num1=5, Num2=6.
+Num1 <  Num2 T
+Num1 <=  Num2 F
+Num1 > Num2 F
+Num1 >= Num2 F
+Num1 != Num2 T
+Identify the expressions which would result in True?
+a. 1, 2, 3
+b. 1, 2, 5
+c. 2, 3, 4
+d. 1, 4, 5
+
+Conditional statement
+if-else
+
+input dayNumber
+if(dayNumber==1) then
+	display "Monday"
+else if(dayNumber==2) then
+	display "Tuesday"
+else if(dayNumber==3) then
+	display "Wenesday"
+else if(dayNumber==4) then
+	display "Thurday"
+else if(dayNumber==5) then
+	display "Friday"
+else if(dayNumber==6) then
+	display "Saturday"
+else if(dayNumber==7) then
+	display "Sunday"
+else 
+	display "invalid input"
+
+Iterative statement - statement needs to execute multiple times
+  looping
+	-for-loop
+	-while
+	-doWhile
+
+for-loop
+{init
+condition
+body
+updation}
+
+for(init;condition;updation){}
+for(i=1;i<=10;i++/i=i+1)
+	display "hello"
+end-for
+	 
+
+No_Of_Passengers = 5
+for(Passenf=gerCount=1;PassengerCount<=NoOfPassengers;Passsenger++){
+	display "Landed"
+end-for
+
+Write a pseudo-code to calculate the factorial of a given number.
+Example: factorial of 5 = 5*4*3*2*1 = 120.
+Note 1: Factorial of 0 is 1.
+Note 2: You can drag and drop the required number of pseudo-code magnets into the pseudo-code box.
+Estimated Time: 15 minutes
+
+input Number
+
+if(Number < 0) then
+	display "cannot define fact for negative number"
+else if(Number =0) then
+	display 1
+else 
+	result = 1 //init
+	for(i=1;i<=Number;i=i-1)
+		result = result * i
+		display result
+	end-for
+
+Steps
+
+Number=Number-1
+while(Number!=0) do
+display Factorial
+Factorial=1
+input Number
+if(Number==0) then
+end-while
+Factorial=Factorial*Number
+end-if
+Factorial=1
+else
+Number=Number-1
+while(Number!=0) do
+display Factorial
+Factorial=1
+input Number
+if(Number==0) then
+end-while
+Factorial=Factorial*Number
+end-if
+Factorial=1
+else
+----X---
+
+input Number
+Factorial=1
+if(Number==0) then
+    display Factorial
+end-if
+ 
+while(Number!=0) do
+    Factorial=Factorial*Number
+    Number=Number-1
+end-while
+ 
+display Factoria
+
+using for loop
+input Number
+result = 1 
+for(i=1;i<=Number;i=i-1)
+	result = result * i
+	display result
+	end-for
+
+
+
+
