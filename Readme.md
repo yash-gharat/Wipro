@@ -1,7 +1,7 @@
 # Python Basic Fundamentals
     - 10Days
 # NMS Python Testing
-    - 48Days
+    - 10 weeks
 
 # Part1 : Python Basics
 
