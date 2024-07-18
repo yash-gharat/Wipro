@@ -1,0 +1,56 @@
+class PDU_Session:
+    def __init__(self):
+        self.state = 'INACTIVE'
+        self.session_id = None
+        self.amf_info = None
+        self.sm_context = None
+ 
+    def establish_pdu_session(self):
+        print("Starting PDU Session Establishment Process...")
+        self.send_pdu_session_establishment_request()
+ 
+    def send_pdu_session_establishment_request(self):
+        if self.state == 'INACTIVE':
+            print("UE -> SMF: PDU Session Establishment Request")
+            self.receive_pdu_session_establishment_accept()
+ 
+    def receive_pdu_session_establishment_accept(self):
+        print("SMF -> UE: PDU Session Establishment Accept")
+        self.state = 'ACTIVE'
+        self.session_id = 'PDU-1234'  # Example session ID
+        self.amf_info = 'AMF-Info'
+        self.update_sm_context('Session Context Information')
+        self.configuration_update_command()
+ 
+    def update_sm_context(self, context):
+        self.sm_context = context
+        print(f"SM Context updated to {self.sm_context}.")
+ 
+    def configuration_update_command(self):
+        print("SMF -> UE: Configuration Update Command")
+        self.send_configuration_update_complete()
+ 
+    def send_configuration_update_complete(self):
+        print("UE -> SMF: Configuration Update Complete")
+        self.send_pdu_session_establishment_complete()
+ 
+    def send_pdu_session_establishment_complete(self):
+        print("UE -> SMF: PDU Session Establishment Complete")
+        self.pdu_session_procedure_complete()
+ 
+    def pdu_session_procedure_complete(self):
+        print("PDU Session establishment procedure complete. UE is now in ACTIVE state and has an established PDU session.")
+ 
+    def release_pdu_session(self):
+        if self.state == 'ACTIVE':
+            print("UE -> SMF: PDU Session Release Request")
+            self.state = 'INACTIVE'
+            print("SMF -> UE: PDU Session Release Accept")
+            print("PDU Session is now released.")
+        else:
+            print("No active PDU session to release.")
+ 
+# Test the PDU Session Setup Process
+pdu_session = PDU_Session()
+pdu_session.establish_pdu_session()  # Simulate the PDU session establishment process
+pdu_session.release_pdu_session()  # Optional: Simulate the PDU session release process

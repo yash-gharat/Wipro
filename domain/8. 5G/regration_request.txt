@@ -1,0 +1,43 @@
+# Pseudo-code to create and send a Registration Request message
+
+class RegistrationRequest:
+    def __init__(self, suci, requested_nssai, ue_security_capabilities, additional_info):
+        self.suci = suci
+        self.requested_nssai = requested_nssai
+        self.ue_security_capabilities = ue_security_capabilities
+        self.additional_info = additional_info
+
+    def encode(self):
+        # Encoding the Registration Request message to a binary format (simplified to a string for demonstration)
+        encoded_message = (
+            f"RegistrationRequest(SUCI: {self.suci}, "
+            f"NSSAI: {self.requested_nssai}, "
+            f"Security: {self.ue_security_capabilities}, "
+            f"AdditionalInfo: {self.additional_info})"
+        )
+        return encoded_message
+
+    def send(self, network_entity):
+        # Simulate sending the message to the AMF (Access and Mobility Management Function)
+        encoded_message = self.encode()
+        network_entity.receive_message(encoded_message)
+
+class NetworkEntity:
+    def receive_message(self, message):
+        print(f"Received message: {message}")
+        # Here we would process the received message
+
+# Example usage
+suci = "00100100001234567890"
+requested_nssai = ["slice1", "slice2"]
+ue_security_capabilities = {
+    "integrityAlgorithms": ["IA1", "IA2"],
+    "encryptionAlgorithms": ["EA1", "EA2"]
+}
+additional_info = {
+    "lastVisitedTAI": {"mcc": "310", "mnc": "410", "tac": "12345"}
+}
+
+registration_request = RegistrationRequest(suci, requested_nssai, ue_security_capabilities, additional_info)
+network_entity = NetworkEntity()
+registration_request.send(network_entity)

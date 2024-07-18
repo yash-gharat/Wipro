@@ -1,0 +1,47 @@
+# Define a class for Network Slice
+
+class NetworkSlice:
+
+    def __init__(self, id, characteristics):
+
+        self.slice_id = id
+
+        self.service_characteristics = characteristics
+ 
+    def receive_message(self, message, from_slice_id):
+
+        print(f"Slice {self.slice_id} received message from Slice {from_slice_id}: {message}")
+ 
+    def get_id(self):
+
+        return self.slice_id
+ 
+# Function to simulate sending a message from one slice to another
+
+def send_message(sender, receiver, message):
+
+    print(f"Slice {sender.get_id()} sending message to Slice {receiver.get_id()}")
+
+    receiver.receive_message(message, sender.get_id())
+ 
+def main():
+
+    # Create network slices with different service characteristics
+
+    slice1 = NetworkSlice(1, "Low Latency")
+
+    slice2 = NetworkSlice(2, "High Throughput")
+
+    slice3 = NetworkSlice(3, "Massive IoT")
+ 
+    # Simulate communication between slices
+
+    send_message(slice1, slice2, "Requesting bandwidth allocation for AR application")
+
+    send_message(slice2, slice3, "Requesting device connectivity status for IoT devices")
+
+    send_message(slice3, slice1, "IoT device status report")
+ 
+if __name__ == '__main__':
+
+    main()

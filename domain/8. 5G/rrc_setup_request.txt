@@ -1,0 +1,31 @@
+# code to create and send an RRC Setup Request message
+
+class RRCSetupRequest:
+    def __init__(self, ue_identity, establishment_cause, selected_plmn):
+        self.ue_identity = ue_identity
+        self.establishment_cause = establishment_cause
+        self.selected_plmn = selected_plmn
+
+    def encode(self):
+        # Encoding the RRC Setup Request message to a binary format
+        encoded_message = f"RRCSetupRequest(UE_ID: {self.ue_identity}, Cause: {self.establishment_cause}, PLMN: {self.selected_plmn})"
+        return encoded_message
+
+    def send(self, network_entity):
+        # Simulate sending the message to the gNodeB
+        encoded_message = self.encode()
+        network_entity.receive_message(encoded_message)
+
+class NetworkEntity:
+    def receive_message(self, message):
+        print(f"Received message: {message}")
+        # Here we would process the received message
+
+# Example usage
+ue_identity = "987654321"
+establishment_cause = "mo-Signalling"  # Mobile-originated signaling
+selected_plmn = {"mcc": "310", "mnc": "410"}  # Example PLMN
+
+rrc_setup_request = RRCSetupRequest(ue_identity, establishment_cause, selected_plmn)
+network_entity = NetworkEntity()
+rrc_setup_request.send(network_entity)

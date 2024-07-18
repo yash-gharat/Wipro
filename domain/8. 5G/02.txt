@@ -1,0 +1,35 @@
+class UserEquipment:
+    def __init__(self):
+        self.state = 'DEREGISTERED'
+        self.context = {}
+ 
+    def power_on(self):
+        print("UE powered on, starting registration process.")
+        self.send_initial_registration_request()
+ 
+    def send_initial_registration_request(self):
+        print("Sending: Initial Registration Request")
+        self.receive_initial_registration_accept()
+ 
+    def receive_initial_registration_accept(self):
+        print("Received: Initial Registration Accept")
+        self.state = 'REGISTERED'
+        self.complete_registration()
+ 
+    def complete_registration(self):
+        print("Registration complete. UE is now in REGISTERED state.")
+ 
+    def deregister(self):
+        if self.state == 'REGISTERED':
+            print("Sending: Deregistration Request")
+            self.state = 'DEREGISTERED'
+            print("Received: Deregistration Accept")
+            print("UE is now deregistered.")
+        else:
+            print("UE is already deregistered.")
+ 
+ 
+# Test the registration process
+ue = UserEquipment()
+ue.power_on()  # Simulate the UE turning on and registering
+ue.deregister()  # Optional: Simulate the UE deregistering
